@@ -15,7 +15,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
 
     try {
       // Chamada ao backend para análise de veracidade
-      const response = await fetch('https://truth-finder-five.vercel.app//api/analisar', {
+      const response = await fetch('/api/analisar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
