@@ -15,7 +15,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
 
     try {
       // Chamada ao backend para análise de veracidade
-      const response = await fetch('/api/analisar', {
+      const response = await fetch('http://localhost:3000/api/analisar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
