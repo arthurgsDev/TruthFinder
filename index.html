@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TruthFinder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="tf-container">
+    <div class="tf-header">
+      <div class="d-flex align-items-center">
+        <span class="tf-logo">
+          <img src="icon2.png" alt="TruthFinder Logo">
+        </span>
+        <span class="tf-title">TruthFinder</span>
+      </div>
+      <button class="dark-toggle" id="darkModeToggle" title="Alternar modo escuro"><i class="bi bi-moon"></i></button>
+    </div>
+
+    <div class="card tf-card mb-3">
+      <div class="card-body card-content">
+        <div class="tf-status">
+          <span class="tf-status-icon" id="status-icon"><i class="bi bi-check-circle-fill"></i></span>
+          <span class="tf-status-text" id="status-text"></span>
+        </div>
+
+        <div class="tf-confidence-block mb-3">
+          <div class="progress-label">
+            <span class="tf-confidence-label">Nível de Confiança:</span>
+            <span class="confidence-value" id="credibility"></span>
+          </div>
+          <div class="tf-progress-bar-bg">
+            <div class="tf-progress-bar progress-animation" id="confidence-bar" style="width: 95%"></div>
+          </div>
+        </div>
+
+        <div class="tf-reasons-block">
+          <span class="tf-reasons-label fw-semibold">Razões:</span>
+          <ul class="tf-reasons-list mt-2" id="reasons">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn tf-feedback-btn" id="feedbackBtn">
+      <i class="bi bi-chat-left-text me-2"></i>Enviar Feedback
+    </button>
+    <div id="feedbackArea" class="feedback-area hidden">
+      <textarea id="feedbackText" placeholder="Digite seu feedback..."></textarea>
+      <div class="feedback-buttons">
+        <button id="sendFeedback" class="btn btn-success">Enviar</button>
+        <button id="cancelFeedback" class="btn btn-secondary">Cancelar</button>
+      </div>
+    </div>
+    <div id="toast" class="toast">Feedback enviado com sucesso!</div>
+    <script src="popup.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
